@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste de souhaits - BrawlPlush</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BrawlPlush</h1>
+            <p>Peluches Brawl Stars officielles</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/wishlist" class="active">Liste de souhaits</a></li>
+                <li><a href="/cart" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="wishlist-section">
+            <h2>Ma liste de souhaits</h2>
+            
+            <div class="wishlist-controls">
+                <div class="sort-control">
+                    <label for="wishlist-sort">Trier par:</label>
+                    <select id="wishlist-sort">
+                        <option value="priority-desc">Priorité (décroissante)</option>
+                        <option value="priority-asc">Priorité (croissante)</option>
+                        <option value="price-asc">Prix (croissant)</option>
+                        <option value="price-desc">Prix (décroissant)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="wishlist-container" id="wishlist-container">
+                <div class="wishlist-empty" id="wishlist-empty">
+                    <p>Votre liste de souhaits est vide.</p>
+                    <a href="/" class="btn">Découvrir des produits</a>
+                </div>
+                
+                <div class="wishlist-items" id="wishlist-items">
+                    <!-- Les items de la liste de souhaits seront ajoutés dynamiquement -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BrawlPlush</h3>
+                <p>La référence des peluches Brawl Stars en France</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/wishlist">Liste de souhaits</a></li>
+                    <li><a href="/cart">Panier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@brawlplush.fr</p>
+                <p>Téléphone: 01 23 45 67 89</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BrawlPlush - Projet Challenge JS</p>
+        </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/wishlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du produit - BrawlPlush</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BrawlPlush</h1>
+            <p>Peluches Brawl Stars officielles</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/wishlist">Liste de souhaits</a></li>
+                <li><a href="/cart" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-detail">
+            <div class="breadcrumb">
+                <a href="/">Accueil</a> &gt; <span id="product-name-breadcrumb">Détails du produit</span>
+            </div>
+            
+            <div class="product-container" id="product-container">
+                <div class="loading">Chargement du produit...</div>
+            </div>
+            
+            <div class="similar-products">
+                <h3>Produits similaires</h3>
+                <div class="similar-products-grid" id="similar-products-container">
+                    <!-- Produits similaires ajoutés dynamiquement -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BrawlPlush</h3>
+                <p>La référence des peluches Brawl Stars en France</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/wishlist">Liste de souhaits</a></li>
+                    <li><a href="/cart">Panier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@brawlplush.fr</p>
+                <p>Téléphone: 01 23 45 67 89</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BrawlPlush - Projet Challenge JS</p>
+        </div>
+    </footer>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/product.js"></script>
+</body>
+</html>

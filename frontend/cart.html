@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - BrawlPlush</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BrawlPlush</h1>
+            <p>Peluches Brawl Stars officielles</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/wishlist">Liste de souhaits</a></li>
+                <li><a href="/cart" class="cart-icon active"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h2>Mon panier</h2>
+            
+            <div class="cart-container" id="cart-container">
+                <div class="cart-empty" id="cart-empty">
+                    <p>Votre panier est vide.</p>
+                    <a href="/" class="btn">Continuer mes achats</a>
+                </div>
+                
+                <div class="cart-content" id="cart-content">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Items du panier ajoutés dynamiquement -->
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <h3>Récapitulatif</h3>
+                        <div class="summary-line">
+                            <span>Sous-total</span>
+                            <span id="subtotal">0,00 €</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Remises</span>
+                            <span id="discount">0,00 €</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total</span>
+                            <span id="total">0,00 €</span>
+                        </div>
+                        
+                        <div class="shipping-address">
+                            <h4>Adresse de livraison</h4>
+                            <div class="address-search">
+                                <input type="text" id="address-search" placeholder="Rechercher une adresse...">
+                                <div id="address-suggestions" class="address-suggestions"></div>
+                            </div>
+                            <div id="selected-address" class="selected-address"></div>
+                            <label class="save-address">
+                                <input type="checkbox" id="save-address"> Enregistrer cette adresse
+                            </label>
+                        </div>
+                        
+                        <button id="checkout-btn" class="btn checkout-btn">Passer la commande</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BrawlPlush</h3>
+                <p>La référence des peluches Brawl Stars en France</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/wishlist">Liste de souhaits</a></li>
+                    <li><a href="/cart">Panier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@brawlplush.fr</p>
+                <p>Téléphone: 01 23 45 67 89</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BrawlPlush - Projet Challenge JS</p>
+        </div>
+    </footer>
+
+    <div id="order-confirmation" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Commande confirmée !</h3>
+            <p>Votre commande a été confirmée et sera traitée dans les plus brefs délais.</p>
+            <p>Un email de confirmation vous a été envoyé.</p>
+            <button class="btn" id="continue-shopping">Continuer mes achats</button>
+        </div>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>
